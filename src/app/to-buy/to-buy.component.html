@@ -8,7 +8,7 @@
                   <form>
                     Author Name:<br>
                     <input type="text" name="AuthorName">
-                    <button type="button" class="btn btn-outline-warning waves-effect px-3"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button type="button" class="btn  btn-sm btn-outline-warning waves-effect px-3"><i class="fa fa-search" aria-hidden="true"></i></button>
                   </form>
                   <div >
                       <h6>Categories</h6>   
@@ -28,17 +28,21 @@
                   </div>          
          <!-- End Filter -->
           </div>
-          <div class="col-9 ">
-              <div class="container book-list-container mt-5 ">
-                  <div class="row">
-                        <div class="card col-sm-4 p-0 ">
-                            <img class="card-img-top img-fluid " src=""alt="Card image cap">
-                            <div class="card-block">
-                              <h5></h5>
-                              <p></p>
+          <div class="col-9" >
+              <div class="container book-list-container flex "  >
+                  <div class="row " >
+                        <div class="card col-md-3 m-2 " *ngFor = "let users of user" >
+                            <div *ngFor = "let bookpic of BookPicture">
+                                    <img class="" src="{{bookpic.pic}}"alt="Card image cap">
                             </div>
-                            <button type="button" class="btn btn-light mb-0"></button>
-                          </div>
+                                    
+                                    <div class="card-block">
+                                      <h5>{{users.title}}</h5>
+                                      <p id="custom-size">{{users.description}}</p>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-outline-dark waves-effect flex text-center px-3"><i class="fa fa-search" aria-hidden="true"></i></button> 
+                                   
+                            </div>
                   </div>
                 <!--End Book-section -->
             </div>

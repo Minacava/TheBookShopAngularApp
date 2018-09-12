@@ -12,7 +12,7 @@ export class PetitionsService{
     }
 
     getBook():Observable<any>{
-        return this._http.get(this.url + '/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49');
+        return this._http.get(this.url + '/films');
     }
 }
 

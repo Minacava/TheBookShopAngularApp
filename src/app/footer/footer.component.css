@@ -1,3 +1,5 @@
+
+
 strong{
     font-weight: lighter!important;
     color:white!important;
@@ -5,25 +7,25 @@ strong{
 }
 
 .footer {
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
+    /* right: 0;
+    bottom: 0 !important;
+    left: 0; */
+    padding: 0.3rem;
     background-color: #0d47a1 !important;
     text-align: center;
-    position: fixed;
     color:white!important;
     font-weight: lighter!important;
     font-size: 0.7em;
+    
 
   }
 .pre_footer {
     background-color:#FBD160;
-    bottom: 55px;
-    position: fixed;
+    bottom: 55px !important;
     width: 100%;
     margin:0;
     padding-right: 5%;
+    z-index: 1;
 }
 .icon-Prefooter{
     color:white;
@@ -34,3 +36,4 @@ strong{
 a[target=_blank] { 
     color: #e4ecf6; 
 } 
+
