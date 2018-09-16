@@ -80,6 +80,9 @@ h4{
     height: 150px!important;
     margin: 1%;
 }
+.md-form {
+    bottom: 1px!important;
+}
 
 /* Responsive */
 

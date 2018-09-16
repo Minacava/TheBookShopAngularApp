@@ -4,15 +4,18 @@ import { Observable } from 'rxjs';
 
 @Injectable ()
 export class PetitionsService{
-    public url: string;
+    public url:string;
+    // public jsonObject:any;
     constructor(
         public _http:HttpClient
     ){
-        this.url = "https://ghibliapi.herokuapp.com";
+        this.url = "../assets/data.json";
+        // this.jsonObject = JSON.parse(this.url);
+
     }
 
     getBook():Observable<any>{
-        return this._http.get(this.url + '/films');
+        return this._http.get(this.url);
     }
 }
 

@@ -20,9 +20,6 @@ export class ToBuyComponent implements OnInit {
   ) {
     this.BookPicture = [
       new BookPictures ( 25, '../assets/img/portada.png'),
-      
-   
-
   ];
    }
 

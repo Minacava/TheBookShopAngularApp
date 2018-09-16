@@ -24,16 +24,33 @@ a:hover {
     transition: all .2s ease-in-out;
     text-decoration: none;
 }
-img{
-    width: 120px;
-    height: 120px;
+.card{
+    padding-bottom: 30px;
 }
+img{
+    height: 200px;
+  
+}
+.btn-books{
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+    z-index: 1;
+}
+.custom-price{
+    position: absolute;
+    bottom: 0;
+    left:20px;
+    z-index: 1;
+    font-size: 1.1em;
 
+}
 .flex { 
     display: flex; 
     flex-direction: row; 
 
 }
+
 .btn[class*="btn-outline-"] {
     padding-top: .3rem;
     padding-bottom: .3rem;
@@ -42,14 +59,15 @@ img{
 #custom-size{
     font-size: 0.6em;
 }
-
+.contanier-bot{
+    height: 200px;
+    width: 100%;
+}
 input[type="text"]{
     border-bottom: 1px solid #f7f5f5;
 }
 
 @media (max-width: 767.98px) { 
 
-    .filter{
-        display: none;
-    }
+   
  }

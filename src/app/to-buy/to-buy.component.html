@@ -36,17 +36,21 @@
               <div class="container book-list-container flex "  >
                   <div class="row " >
                         <div class="card col-md-3 m-2 " *ngFor = "let users of user" >
-                            <div *ngFor = "let bookpic of BookPicture">
-                                    <img class="" src="{{bookpic.pic}}"alt="Card image cap">
-                            </div>
-                                    
-                                    <div class="card-block">
+                          <div class="view">
+                            <img src="{{users.image}}" class="card-img-top" alt="photo">
+                            <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                          </div>     
+                                    <div class="card-block mb-2">
                                       <h5>{{users.title}}</h5>
-                                      <p id="custom-size">{{users.description}}</p>
+                                      <p id="custom-size">{{users.description}}</p>                      
                                     </div>
-                                    <button type="button" class="btn btn-sm btn-outline-dark waves-effect flex text-center px-3"><i class="fa fa-search" aria-hidden="true"></i></button> 
+                                    <p class="custom-price mt-5">${{users.price}}</p>
+                                    <button type="button" class="btn btn-books btn-sm btn-outline-dark waves-effect flex text-center px-3"><i class="fa fa-search" aria-hidden="true"></i></button> 
                                    
-                            </div>
+                          </div>
+                          <div class="contanier-bot"></div>
                   </div>
                 <!--End Book-section -->
             </div>
