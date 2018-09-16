@@ -1,8 +1,13 @@
+
 .filter{
-    margin-top:3%;
+    margin-top:1%;
+    padding: 2%;
     font-size: 1em;
     font-family: 'Karla', sans-serif;
-    color: #FBD160;
+    color:white;
+    margin-left: 0;
+    background: #FBD160;
+    height: 20vh;
 }
 .filter-links{
     list-style:none;
@@ -36,6 +41,10 @@ img{
 }
 #custom-size{
     font-size: 0.6em;
+}
+
+input[type="text"]{
+    border-bottom: 1px solid #f7f5f5;
 }
 
 @media (max-width: 767.98px) { 

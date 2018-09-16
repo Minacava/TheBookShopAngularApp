@@ -30,6 +30,11 @@ h4{
     max-width: 40%;
     float: left;
     font-family: 'M PLUS Rounded 1c', sans-serif;  
+    font-weight: bolder;
+    background-color: #FBD160;
+    color: whitesmoke;
+    margin-top: -120px;
+ 
 }
 
 /* About Us Box */
@@ -37,7 +42,7 @@ h4{
     width: 30%;
     height: auto;
     color:#757575;
-    margin-top:2%;
+    margin-top:4%;
     margin-right:1px;
     padding: 0.2%;
     justify-content: center;
@@ -107,5 +112,10 @@ h4{
         width: 70%;
         margin-top:2%;
         margin-right: 2%;
+    }
+    .Title-Container{
+        margin: 10px auto;
+        max-width: 90%;
+     
     }
 }

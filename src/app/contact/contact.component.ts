@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactUsers } from '../models/ContactUsers'
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  public contactUser: ContactUsers;
 
-  constructor() { }
+
+  constructor() { 
+  this.contactUser = new ContactUsers('','','')
+  }
 
   ngOnInit() {
   }
-
+  onSubmit() {
+    console.log("evento lanzado");
+  }
+ 
 }
