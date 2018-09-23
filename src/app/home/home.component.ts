@@ -12,6 +12,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class HomeComponent implements OnInit{
   public bestSellers: Array<BestSell>;
   public nombre:string;
+
   constructor(
     private _route:ActivatedRoute,
     private _router:Router
@@ -24,14 +25,15 @@ export class HomeComponent implements OnInit{
     ];
     this._route.params.subscribe((params:Params) =>{
      this.nombre = params.nombre;
-     
-     console.log(this.nombre);
+     console.log(params);
+
 
   })
  }
 
  ngOnInit(){
      console.log(this.bestSellers);
+
  }
 
 }

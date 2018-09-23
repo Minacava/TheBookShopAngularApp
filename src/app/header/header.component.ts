@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import { SearchComponent } from '../search/search.component'
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  providers: [
+    SearchComponent
+
+  ]
 })
 export class HeaderComponent implements OnInit {
   public login: boolean;

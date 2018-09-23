@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { PetitionsService } from '../services/petitions.service';
 import {BookPictures } from '../models/BookPictures';
+import { SearchComponent } from '../search/search.component'
 
 @Component({
   selector: 'app-to-buy',
   templateUrl: './to-buy.component.html',
   styleUrls: ['./to-buy.component.css'],
   providers: [
-    PetitionsService
+    PetitionsService,
+    SearchComponent
   ]
-  
 })
 export class ToBuyComponent implements OnInit {
   public user:any;
   public BookPicture: Array<BookPictures>;
+ 
+
+ 
   constructor(
     private _petitionsService:PetitionsService
 
@@ -28,11 +32,16 @@ export class ToBuyComponent implements OnInit {
         result => {
          this.user = result;
          console.log(result);
+      
         },
         error => {
           console.log(<any>error);
         }
     );
+   
   }
  
 }
+  
+ 
+

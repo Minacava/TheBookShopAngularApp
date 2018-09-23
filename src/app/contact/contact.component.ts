@@ -11,13 +11,15 @@ export class ContactComponent implements OnInit {
 
 
   constructor() { 
-  this.contactUser = new ContactUsers('','','')
+  this.contactUser = new ContactUsers('','','','')
   }
 
   ngOnInit() {
   }
-  onSubmit() {
+  onSubmit(form) {
+    form.reset();
     console.log("evento lanzado");
+    console.log(this.contactUser);
   }
  
 }

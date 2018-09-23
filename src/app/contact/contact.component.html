@@ -2,23 +2,19 @@
 
 <!-- Default form contact -->
 <div id = "formCustomized">
-
-
-  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
-
+  <form (ngSubmit)="onSubmit(ContactoForm)" #ContactoForm="ngForm">
     <h1>Contact Us!</h1>
-  
-    <input placeholder="Name" type="text"  value="" required>
-  
-    <input placeholder="Email address" type="email"  value="" required>
-  
-    <input placeholder="Location" type="text" value="" required>
-    
+    <input placeholder="Name" type="text" #name="ngModel"[(ngModel)]= "contactUser.name" name ="first"required/>
+    <span class= "validated" *ngIf ="name.touched && !name.valid">Please, enter a valid name.</span>
+    <input placeholder="Email address" type="email"#email = "ngModel"[(ngModel)]= "contactUser.email" name ="second"required/>
+    <span class= "validated" *ngIf ="email.touched && !email.valid">Please, enter a valid email.</span>
+    <input placeholder="Location" type="text" #location= "ngModel"[(ngModel)]= "contactUser.location" name ="third"required/>
+    <span class= "validated" *ngIf ="location.touched && !location.valid">Please, enter a valid name.</span>
     <div class="flex">
-      <textarea placeholder="Message" rows="1" required></textarea>
+      <textarea #messege= "ngModel"[(ngModel)]= "contactUser.messege" name ="four" placeholder="Message" rows="1" required></textarea>
+      <span class= "validated" *ngIf ="message.touched && !message.valid">Please, enter a valid name.</span>
     </div>
   <button>Send</button>
-  
   </form>
   <!-- Default form contact -->
 </div>

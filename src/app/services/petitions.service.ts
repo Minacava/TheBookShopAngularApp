@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable ()
 export class PetitionsService{
     public url:string;
+  length: number;
     // public jsonObject:any;
     constructor(
         public _http:HttpClient
@@ -15,7 +16,9 @@ export class PetitionsService{
     }
 
     getBook():Observable<any>{
+       
         return this._http.get(this.url);
     }
+   
 }
 

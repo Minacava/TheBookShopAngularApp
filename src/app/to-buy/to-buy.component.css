@@ -1,13 +1,15 @@
 
 .filter{
     margin-top:1%;
-    padding: 2%;
+
     font-size: 1em;
     font-family: 'Karla', sans-serif;
-    color:white;
+    color:black;
     margin-left: 0;
-    background: #FBD160;
     height: 20vh;
+}
+.borderSearch {
+    border-bottom: black 1px solid !important;
 }
 .filter-links{
     list-style:none;
@@ -26,17 +28,13 @@ a:hover {
 }
 .card{
     padding-bottom: 30px;
+    margin-top: 10% !important;
 }
 img{
     height: 200px;
   
 }
-.btn-books{
-    position: absolute;
-    bottom: 2px;
-    right: 20px;
-    z-index: 1;
-}
+
 .custom-price{
     position: absolute;
     bottom: 0;
@@ -51,6 +49,12 @@ img{
 
 }
 
+.btn-books{
+    position: absolute;
+    bottom: 2px;
+    right: 20px;
+    z-index: 1;
+}
 .btn[class*="btn-outline-"] {
     padding-top: .3rem;
     padding-bottom: .3rem;

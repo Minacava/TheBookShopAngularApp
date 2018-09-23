@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ToBuyComponent } from './to-buy/to-buy.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
+import { SearchComponent } from './search/search.component';
 // Array de rutas
 
 const appRoutes: Routes = [
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     {path: 'ToBuy', component: ToBuyComponent},
     {path: 'Contact', component: ContactComponent},
     {path: 'ShopingCart', component: ShopingCartComponent},
+    {path: 'Search', component: SearchComponent},
     {path: '**', component: HomeComponent}
     // Siempre última ruta 404
 

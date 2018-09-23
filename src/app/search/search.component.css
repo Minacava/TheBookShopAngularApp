@@ -1,0 +1,11 @@
+.btn-books{
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    z-index: 1;
+}
+.btn[class*="btn-outline-"] {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    width: 5%;
+}

@@ -11,6 +11,7 @@ import { ToBuyComponent } from './to-buy/to-buy.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { MainComponentComponent } from './main-component/main-component.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MainComponentComponent } from './main-component/main-component.componen
     ToBuyComponent,
     ContactComponent,
     ShopingCartComponent,
-    MainComponentComponent
+    MainComponentComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
