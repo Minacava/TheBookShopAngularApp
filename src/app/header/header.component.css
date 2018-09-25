@@ -78,8 +78,20 @@ a:hover {
 }
 
 .icon-Header-li{
-    padding-right:2%;
+    padding:10px 9px;
+    transition: .2s;
  
+}
+.icon-Header:hover {
+    color:white!important;
+}
+.icon-Header:hover {
+    background-color: #e25714;
+
+}
+.icon-Header-li:hover {
+    background-color: #e25714;
+
 }
 .navbar-toggler:not(:disabled):not(.disabled) {
     border:none;
@@ -107,6 +119,10 @@ a:hover {
     font-size: 0.6em;
     text-transform: uppercase;
     color: #757575!important;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    background-color: #e25714;
+    color: white!important;
 }
 .Login{
     color: #757575!important;
