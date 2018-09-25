@@ -33,8 +33,8 @@
                   <a (click)="redirect()"class="dropdown-item ">Sci-Fi &amp; Fantasy</a>
                 </div>
               </li> -->
-              <li class="nav-item active ml-5">
-                <a [routerLink]="['/ToBuy']" [routerLinkActive]="['active']"class="nav-link text-white" href="#">
+              <li class="nav-item active ml-5" >
+                <a  (click)="getBooksfr()"[routerLink]="['/ToBuy']" [routerLinkActive]="['active']"class="nav-link text-white" href="#">
                   <span class="sr-only">(current)</span>TO BUY</a>
               </li>
               <li class="nav-item active ml-5">
@@ -49,13 +49,13 @@
          <!-- Collapsible content -->
         <div  *ngIf = "login; else noLogin" >
           <h5 class = "Login "> Hi! Marina</h5>
-          <button (click) = "unsetLogin()"type="button" class="btn btn-outline-primary btn-rounded waves-effect">
+          <button (click) = "unsetLogin()"type="button" class="btn btn-outline-primary btn-rounded waves-effect icon-Header-li">
             Log Out
           </button>
         </div>
         
         <ng-template #noLogin>
-            <button (click) = "setLogin()"type="button" class="btn btn-outline-primary btn-rounded waves-effect">
+            <button (click) = "setLogin()"type="button" class="btn btn-outline-primary btn-rounded waves-effect icon-Header-li">
               Log In
             </button>
         </ng-template>

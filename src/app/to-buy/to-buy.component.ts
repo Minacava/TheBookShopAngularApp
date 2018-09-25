@@ -16,7 +16,7 @@ import { Router } from "@angular/router";
 export class ToBuyComponent implements OnInit {
   public book: any;
   public BookPicture: Array<BookPictures>;
-  public SearchBook: boolean;
+  public DisplayBooks: boolean;
   public matches = [];
   public inputResult: string = "";
   public values = '';
@@ -24,24 +24,28 @@ export class ToBuyComponent implements OnInit {
 
   constructor(
     private _petitionsService: PetitionsService,
+    private _router:Router,
 
 
   ) {
     this.BookPicture = [
       new BookPictures(25, '../assets/img/portada.png'),
     ];
-    this.SearchBook = true;
+    this.DisplayBooks = true;
   }
 
   onKey(value: string) {
     console.log(value);
   }
-  ngOnInit() {
+    demoDisplay() {
+    document.getElementById("GetAlert").style.display = "block";
+}
+
+  getBooksfr(){
     this._petitionsService.getBook().subscribe(
       result => {
         this.book = result;
         console.log(result);
-
       },
       error => {
         console.log(<any>error);
@@ -49,30 +53,29 @@ export class ToBuyComponent implements OnInit {
     );
   }
 
-  onClickMe(inputResult, result) {
+  ngOnInit() {
+    this.getBooksfr();
+  }
+
+  onClickMe(inputResult) {
     for (let i = 0; i < this.book.length; i++) {
       if (inputResult == this.book[i].title) {
+        this.matches = [];
         this.matches.push(this.book[i])
         console.log(this.matches);
       } else if (inputResult != this.book[i].title) {
-        console.log('Not Found');
-        this.SearchBook = false;
-        
+        this.DisplayBooks = false;
+        this.demoDisplay();
       }
       else {
-        console.log('ERROR!')
+       
       }
     }
-  }
 
-  // setSearch() {
-  //   this.SearchBook = true;
-  //   console.log("done")
-  // }
-  // unSearch() {
-   
-  //   console.log("done2")
-  // }
+  }
+  onSubmit() {
+      console.log("Form Submitted!");
+  }
 
 }
 

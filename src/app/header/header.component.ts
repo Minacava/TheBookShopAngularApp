@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import { SearchComponent } from '../search/search.component'
+import { ToBuyComponent} from "../to-buy/to-buy.component"
 
 
 @Component({
@@ -8,7 +8,7 @@ import { SearchComponent } from '../search/search.component'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   providers: [
-    SearchComponent
+    ToBuyComponent
 
   ]
 })

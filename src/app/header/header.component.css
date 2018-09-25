@@ -82,14 +82,14 @@ a:hover {
     transition: .2s;
  
 }
-.icon-Header:hover {
+.icon-Header{
     color:white!important;
 }
 .icon-Header:hover {
     background-color: #e25714;
 
 }
-.icon-Header-li:hover {
+.icon-Header-li{
     background-color: #e25714;
 
 }

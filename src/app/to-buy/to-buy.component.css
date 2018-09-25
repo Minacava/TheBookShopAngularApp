@@ -75,6 +75,14 @@ input[type="text"]{
     border-bottom: 1px solid #f7f5f5;
 }
 
+/* NOT FOUND SECTION  */
+#GetAlert{
+    display: none;
+    font-size: 5em ;
+    margin-top: 30px;
+    text-align: center;
+}
+
 @media (max-width: 767.98px) { 
 
    
