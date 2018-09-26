@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PetitionsService } from '../services/petitions.service';
 import { BookPictures } from '../models/BookPictures';
-
 import { Router } from "@angular/router";
 
+
+declare var  $:any;
 @Component({
   selector: 'app-to-buy',
   templateUrl: './to-buy.component.html',
@@ -18,13 +19,16 @@ export class ToBuyComponent implements OnInit {
   public BookPicture: Array<BookPictures>;
   public DisplayBooks: boolean;
   public matches = [];
+  public modalDis = []
   public inputResult: string = "";
   public values = '';
+  public bookID:any;;
+  public clickedID: any;
 
 
   constructor(
     private _petitionsService: PetitionsService,
-    private _router:Router,
+    private _router: Router,
 
 
   ) {
@@ -37,11 +41,13 @@ export class ToBuyComponent implements OnInit {
   onKey(value: string) {
     console.log(value);
   }
-    demoDisplay() {
+  // Show not found option 
+  demoDisplay() {
     document.getElementById("GetAlert").style.display = "block";
-}
+  }
 
-  getBooksfr(){
+// Calling data
+  getBooksfr() {
     this._petitionsService.getBook().subscribe(
       result => {
         this.book = result;
@@ -52,11 +58,12 @@ export class ToBuyComponent implements OnInit {
       }
     );
   }
-
+// SHowing data to the view
   ngOnInit() {
     this.getBooksfr();
   }
 
+  // Search Result
   onClickMe(inputResult) {
     for (let i = 0; i < this.book.length; i++) {
       if (inputResult == this.book[i].title) {
@@ -68,13 +75,32 @@ export class ToBuyComponent implements OnInit {
         this.demoDisplay();
       }
       else {
-       
+        console.log("Fatal error")
+      }
+    }
+  }
+
+
+
+// Show book Modal
+  DisplayInModal(bookID) {
+    console.log("modal Works");
+    for (let i = 0; i < this.book.length; i++) {
+      if (this.book[i].id == bookID) {
+        this.modalDis = [];
+        this.modalDis.push(this.book[i])
+        console.log(this.modalDis);
+      } else {
+        console.log("Fatal error")
+        console.log(this.modalDis);
       }
     }
 
   }
+
+// Testing form submit
   onSubmit() {
-      console.log("Form Submitted!");
+    console.log("Form Submitted!");
   }
 
 }

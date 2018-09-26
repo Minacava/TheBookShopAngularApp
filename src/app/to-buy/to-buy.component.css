@@ -37,7 +37,14 @@ img{
     height: 300px;
     width: 100%;
 }
-
+.imgModal{
+    height: 300px!important;
+    width: 100%!important;
+  
+}
+.modal-content{
+    width: 50%;
+}
 .custom-price{
     position: absolute;
     bottom: 0;
@@ -58,6 +65,14 @@ img{
     right: 20px;
     z-index: 1;
 
+}
+.btn-books-info{
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1;
+    border:none!important;
+    box-shadow: none!important;
 }
 .btn[class*="btn-outline-"] {
     padding-top: .3rem;
