@@ -1,12 +1,13 @@
 [
     { 
         "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe", 
-        "image":"https://images-na.ssl-images-amazon.com/images/I/41GCOr3aDDL._SY346_.jpg",
-        "title": "Creative Confidence", 
-        "description": "IDEO founder and Stanford d.school creator David Kelley and his brother Tom Kelley, IDEO partner and the author of the bestselling The Art of Innovation, have written a powerful and compelling book on unleashing the creativity that lies within each and every one of us.",
+        "image":"https://images-na.ssl-images-amazon.com/images/I/51mogRTmKbL._SX327_BO1,204,203,200_.jpg",
+        "title": "Platform Revolution", 
+        "description": "Uber. Airbnb. Amazon. Apple. PayPal. All of these companies disrupted their markets when they launched. Today they are industry leaders. What's the secret to their success? These cutting-edge businesses are built on platforms: two-sided markets that are revolutionising the way we do business. ",
         "price": 10.50,
         "date": 2018,
-        "category":"adventure"
+        "category":"adventure",
+        "author":"Geoffrey G Parker"
 
     },
 

@@ -4,12 +4,12 @@
     <!-- Filter -->
     <div class="col-3 filter">
       <div class="col">
-        <h5>FILTERS</h5>
+        <h5> FIND your next fav BOOK</h5>
         <div class="md-form mt-0">
           <form class="form-inline waves-light" (ngSubmit)="onSubmit()" mdbWavesEffect>
             <div class="md-form mt-0">
               <input #box (keyup)="onKey(box.value)" [(ngModel)]="inputResult" name="inputResult" class="form-control"
-                (keyup.tarjet)="GetSearchData()" type="text" placeholder="Search">
+                (keyup.tarjet)="GetSearchData()" type="text" placeholder="Title">
             </div>
             <button (click)="onClickMe(inputResult)" type="submit" class="btn btn-sm btn-outline-warning waves-effect px-3 mb-4"><i
                 class="fa fa-search" aria-hidden="true"></i></button>
@@ -30,7 +30,7 @@
               </a>
             </div>
             <div class="card-block mb-5">
-              <h5>{{books.title}}</h5>
+              <h5 class= "custom-title-size">{{books.title}}</h5>
               <p id="custom-size">{{books.description}}</p>
             </div>
             <p class="custom-price mt-5">${{books.price}}</p>
@@ -43,48 +43,54 @@
               Info
             </button>
             <!-- Modal -->
-            <div class="container book-list-container flex">
-              <div class="row ">
-                <div class="modal fade col-12 m-2 " id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content" *ngFor="let modalDi of modalDis">
-                      <!-- Book content -->
-                      <div class="card ">
-                        <div class="view">
-                          <img src="{{modalDi.image}}" class="card-img-top imgModal" alt="photo">
-                          <a href="#">
-                            <div class="mask rgba-white-slight"></div>
-                          </a>
-                        </div>
-                        <div class="card-block mb-5">
-                          <h5>{{modalDi.title}}</h5>
-                          <p id="custom-size">{{modalDi.description}}</p>
-                        </div>
-                        <p class="custom-price mt-5">${{modalDi.price}}</p>
-                      </div>
-                      <!-- End Book content -->
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-books-info  btn-outline-dark flex " data-dismiss="modal">Close</button>
-                      </div>
+            <div class="modal fade " id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true" *ngFor="let modalDi of modalDis">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <img src="{{modalDi.image}}" class="img-modal" alt="photo">
+                    <div type = "button" class="go-back" data-dismiss="modal" aria-label="Close">
+                      <i class="fa fa-arrow-left"></i> 
+                    </div>
+
+                  </div>
+                  <div class="modal-body ">
+                    <h5 class= "custom-title-size">{{modalDi.title}}</h5>
+                    <p id="custom-size">{{modalDi.description}}</p>
+                    <div class="product-available">
+                      In stock
+                    </div>
+                  </div>
+                  <div class="product-rating">
+                    <i class="fa fa-star rating" star-data="1"></i>
+                    <i class="fa fa-star rating" star-data="2"></i>
+                    <i class="fa fa-star rating" star-data="3"></i>
+                    <i class="fa fa-star" star-data="4"></i>
+                    <i class="fa fa-star" star-data="5"></i>
+                    <div class="product-rating-details">(3.1 - <span class="rating-count">1203</span> reviews)
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-books-info-modal btn-sm btn-outline-dark waves-effect flex text-center px-3"><i
+                          class="fas fa-shopping-cart" aria-hidden="true"></i></button>
                     </div>
                   </div>
                 </div>
-                <!-- End Modal -->
               </div>
+              <!-- End Modal -->
             </div>
+            <!-- End Modal-->
           </div>
           <div class="contanier-bot"></div>
         </div>
       </div>
     </div>
     <!-- End Books Display -->
-    <!-- Search  Display-->
+    <!-- Match  Display-->
     <ng-template #SearchBook>
       <div class="col-9">
         <div class="container book-list-container flex ">
           <div class="row ">
-            <div class="card col-md-3 m-2 " *ngFor="let match of matches">
+            <div class="card-match col-md-3 m-2 " *ngFor="let match of matches">
               <div class="view">
                 <img src="{{match.image}}" class="card-img-top" alt="photo">
                 <a href="#">
@@ -92,19 +98,24 @@
                 </a>
               </div>
               <div class="card-block mb-2">
-                <h5>{{match.title}}</h5>
+                <h5 class= "custom-title-size">{{match.title}}</h5>
                 <p id="custom-size">{{match.description}}</p>
               </div>
               <p class="custom-price mt-5">${{match.price}}</p>
               <button type="button" class="btn btn-books btn-sm btn-outline-dark waves-effect flex text-center px-3"><i
                   class="fas fa-shopping-cart" aria-hidden="true"></i></button>
+                          <!-- Button trigger modal -->
+            <button (click)="DisplayInModal(match.id)" type="button" class="btn btn-books-info btn-outline-dark flex"
+            data-toggle="modal" data-id="{{match.id}}" data-target="#basicExampleModal">
+            Info
+          </button>
             </div>
             <div class="contanier-bot"></div>
           </div>
         </div>
       </div>
     </ng-template>
-    <!-- Search  Display-->
+    <!-- Match  Display-->
     <!-- Not Found -->
     <div id="GetAlert" class="alert alertNotFound alert-light" role="alert">
       <h2 class="notFound">NOT FOUND!</h2>

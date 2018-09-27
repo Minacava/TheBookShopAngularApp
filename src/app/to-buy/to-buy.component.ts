@@ -24,6 +24,7 @@ export class ToBuyComponent implements OnInit {
   public values = '';
   public bookID:any;;
   public clickedID: any;
+ 
 
 
   constructor(
@@ -58,9 +59,12 @@ export class ToBuyComponent implements OnInit {
       }
     );
   }
+
+  
 // SHowing data to the view
   ngOnInit() {
     this.getBooksfr();
+  
   }
 
   // Search Result
