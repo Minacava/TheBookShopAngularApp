@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { MainComponentComponent } from './main-component/main-component.component';
 import { SearchComponent } from './search/search.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchComponent } from './search/search.component';
     ContactComponent,
     ShopingCartComponent,
     MainComponentComponent,
-    SearchComponent
+    SearchComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

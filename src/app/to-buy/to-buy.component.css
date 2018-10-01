@@ -19,6 +19,11 @@
 .filter-links li a:hover{
     color:#4285f4;
 }
+.Serch-Title{
+    font-size: 3em;
+    color:#4285f4;
+}
+
 a:hover {
     transition: all .2s ease-in-out;
     text-decoration: none;
@@ -84,6 +89,8 @@ i.fa-star.rating{
   box-shadow: none!important;
   font-size: 1em;
 }
+
+
 /* Modal Ends  */
 .custom-price{
     position: absolute;
@@ -175,11 +182,49 @@ input[type="text"]{
 /* NOT FOUND SECTION  */
 #GetAlert{
     display: none;
-    font-size: 5em ;
-    margin-top: 30px;
-    text-align: center;
+    margin: auto;
+    padding: 0!important;
 }
-
+/* Animations */
+ .start-screen {
+    justify-content: center;
+    flex-flow: nowrap column;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+  .loading {
+    display: flex;
+    margin-top: 3px 0 !important;
+  }
+  
+  
+  .el1 {
+    -webkit-animation: bouncing 2s  ease;
+            animation: bouncing 2s  ease;
+  }
+  
+  @-webkit-keyframes bouncing {
+    0%, 100% {
+      -webkit-transform: scale3d(0, 1, 1);
+              transform: scale3d(0, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(0, 0, 1);
+              transform: scale3d(0, 0, 1);
+    }
+  }
+  
+  @keyframes bouncing {
+    0%, 100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(0, 0, 1);
+              transform: scale3d(0, 0, 1);
+    }
+  }
+/* End Animations */
 @media (max-width: 767.98px) { 
 
    

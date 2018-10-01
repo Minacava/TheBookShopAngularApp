@@ -4,6 +4,7 @@ import { BookPictures } from '../models/BookPictures';
 import { Router } from "@angular/router";
 
 
+
 declare var  $:any;
 @Component({
   selector: 'app-to-buy',
@@ -11,6 +12,7 @@ declare var  $:any;
   styleUrls: ['./to-buy.component.css'],
   providers: [
     PetitionsService,
+    
 
   ]
 })
@@ -24,6 +26,7 @@ export class ToBuyComponent implements OnInit {
   public values = '';
   public bookID:any;;
   public clickedID: any;
+ 
  
 
 

@@ -4,12 +4,12 @@
     <!-- Filter -->
     <div class="col-3 filter">
       <div class="col">
-        <h5> FIND your next fav BOOK</h5>
+        <h5 class="Search-title"> <span class="Serch-Title">FIND</span> <br> YOUR NEXT FAV<br> <span class="Serch-Title">BOOK</span></h5>
         <div class="md-form mt-0">
           <form class="form-inline waves-light" (ngSubmit)="onSubmit()" mdbWavesEffect>
             <div class="md-form mt-0">
               <input #box (keyup)="onKey(box.value)" [(ngModel)]="inputResult" name="inputResult" class="form-control"
-                (keyup.tarjet)="GetSearchData()" type="text" placeholder="Title">
+                (keyup.tarjet)="GetSearchData()" type="text" placeholder="TITLE">
             </div>
             <button (click)="onClickMe(inputResult)" type="submit" class="btn btn-sm btn-outline-warning waves-effect px-3 mb-4"><i
                 class="fa fa-search" aria-hidden="true"></i></button>
@@ -19,10 +19,10 @@
     </div>
     <!-- End Filter -->
     <!-- Books Display -->
-    <div class="col-9" *ngIf="DisplayBooks; else SearchBook ">
+    <div class="col-9" *ngIf="DisplayBooks; else SearchBook " >
       <div class="container book-list-container flex ">
         <div class="row ">
-          <div class="card col-md-3 m-2 " *ngFor="let books of book">
+          <div class="card col-md-3 m-2 el1" *ngFor="let books of book|Filter: {title: inputResult, category:inputResult, author: inputResult};">
             <div class="view">
               <img src="{{books.image}}" class="card-img-top" alt="photo">
               <a href="#">
@@ -118,6 +118,21 @@
     <!-- Match  Display-->
     <!-- Not Found -->
     <div id="GetAlert" class="alert alertNotFound alert-light" role="alert">
+        <!-- <div class="start-screen">
+            <div class="loading">
+              <div class="loading__element el1">N</div>
+              <div class="loading__element el2">O</div>
+              <div class="loading__element el3">T</div>
+            </div>
+              <div class="loading">
+              <div class="loading__element el1">F</div>
+              <div class="loading__element el2">O</div>
+              <div class="loading__element el3">U</div>
+              <div class="loading__element el4">N</div>
+              <div class="loading__element el5">D</div>
+            </div>
+            
+          </div> -->
       <h2 class="notFound">NOT FOUND!</h2>
     </div>
 
