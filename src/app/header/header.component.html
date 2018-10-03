@@ -32,10 +32,17 @@
   <!-- Search form -->
 
   <!-- Registrer -->
-  <app-register></app-register>
-
+  <div class="text-center">
+      <button  [routerLink]="['/Register']"type="button" data-toggle="modal" data-target="#modalRegisterForm" class="btn btn-outline-primary btn-rounded waves-effect icon-Header-li">
+        Register
+      </button>
+    </div>
   <!-- login -->
-  <app-login></app-login>
+ <div class="text-center">
+        <button  [routerLink]="['/Login']" type="button" data-toggle="modal" data-target="#modalLoginForm" class="btn btn-outline-primary btn-rounded icon-Header-li">
+          Login
+        </button>
+      </div>
   <!-- End login  -->
 
   <!-- Shopping Cart -->

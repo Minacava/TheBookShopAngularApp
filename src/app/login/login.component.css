@@ -19,18 +19,5 @@
 .animatedBtn:hover {
       -webkit-transform: rotate(90deg); transform: rotate(90deg);
   }
-/* Shoping Cart */
 
-/* searchFrom */
-.navbar.navbar-light form .md-form input {
-    border-bottom: 1px solid #f5f2f2;
-}
-
-.form-inline {
-    padding-top: 0.1px;
-}
-::placeholder{
-    color: #757575;
-}
-/* Responsive */
 

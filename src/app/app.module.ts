@@ -12,9 +12,14 @@ import { ContactComponent } from './contact/contact.component';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { MainComponentComponent } from './main-component/main-component.component';
 import { SearchComponent } from './search/search.component';
-import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { PrivatePageComponent } from './private-page/private-page.component';
+
+// Pipe
+import { FilterPipe } from './pipes/filter.pipe';
+// Service
+import{ AuthService } from './services/auth.service'
 
 
 
@@ -32,6 +37,7 @@ import { RegisterComponent } from './register/register.component';
     FilterPipe,
     LoginComponent,
     RegisterComponent,
+    PrivatePageComponent
  
   ],
   imports: [
@@ -42,7 +48,8 @@ import { RegisterComponent } from './register/register.component';
  
   ],
   providers: [
-    appRoutingProviders 
+    appRoutingProviders,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
