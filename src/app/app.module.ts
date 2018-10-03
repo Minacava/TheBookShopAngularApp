@@ -13,6 +13,10 @@ import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { MainComponentComponent } from './main-component/main-component.component';
 import { SearchComponent } from './search/search.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,13 +29,17 @@ import { FilterPipe } from './pipes/filter.pipe';
     ShopingCartComponent,
     MainComponentComponent,
     SearchComponent,
-    FilterPipe
+    FilterPipe,
+    LoginComponent,
+    RegisterComponent,
+ 
   ],
   imports: [
     BrowserModule,
     routing,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+ 
   ],
   providers: [
     appRoutingProviders 

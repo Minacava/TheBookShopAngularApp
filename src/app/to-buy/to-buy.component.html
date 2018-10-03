@@ -22,7 +22,7 @@
     <div class="col-9" *ngIf="DisplayBooks; else SearchBook " >
       <div class="container book-list-container flex ">
         <div class="row ">
-          <div class="card col-md-3 m-2 el1" *ngFor="let books of book|Filter: {title: inputResult, category:inputResult, author: inputResult};">
+          <div class="card col-md-3 m-2 el1" *ngFor="let books of book|Filter: {title: inputResult};">
             <div class="view">
               <img src="{{books.image}}" class="card-img-top" alt="photo">
               <a href="#">

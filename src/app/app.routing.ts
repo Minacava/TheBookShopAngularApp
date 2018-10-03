@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ToBuyComponent } from './to-buy/to-buy.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
+
 // Array de rutas
 
 const appRoutes: Routes = [
