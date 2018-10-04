@@ -16,6 +16,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PrivatePageComponent } from './private-page/private-page.component';
 
+// FireBase Connection
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
 // Pipe
 import { FilterPipe } from './pipes/filter.pipe';
 // Service
@@ -45,7 +49,8 @@ import{ AuthService } from './services/auth.service'
     routing,
     HttpClientModule,
     FormsModule,
- 
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
     appRoutingProviders,

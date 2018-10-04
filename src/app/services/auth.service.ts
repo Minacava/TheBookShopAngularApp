@@ -16,7 +16,7 @@ export class AuthService {
   // Register
   registerUser(email:string, password:string) {
     return new Promise((resolve, reject)=> {
-      this.afAuth.auth.createUserAndRetrieveDataWithEmailAndPassword(email, password).then(userData => resolve(userData),
+      this.afAuth.auth.createUserWithEmailAndPassword (email, password).then(userData => resolve(userData),
       err => reject(err));
     })
   }
