@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+declare var $: any;
 
 @Component({
   selector: 'app-register',
@@ -16,21 +17,36 @@ export class RegisterComponent implements OnInit {
     public authService:AuthService,
     public router:Router
   ) { }
+  
+  public hideModal()
+  {
+    $('#modalRegisterForm').modal('hide');
+ }
 
   ngOnInit() {
   }
   onKey() {
     console.log(this.nombre);
   }
+
+
   onSubmitAddUser(){
     this.authService.registerUser(this.email, this.password).then( (res) =>{
       console.log('Works!!!!!!!')
       console.log(res)
-      this.router.navigate(['Home', this.nombre]);
+      console.log(this.nombre);
+
+    // document.getElementById('modalRegisterForm').classList.remove("modal-open");
+      this.hideModal();
+      this.router.navigate(['/Home', this.nombre])
+     
     }).catch((err)=>{
       console.log(err);
     })
+
+  
   }
+  
 }
 
-// document.getElementById('modalRegisterForm').classList.remove("modal-backdrop")
+
