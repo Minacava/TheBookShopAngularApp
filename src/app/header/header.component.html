@@ -32,18 +32,28 @@
   <!-- Search form -->
 
   <!-- Registrer -->
-  <div class="text-center">
+  <div class="text-center" *ngIf="!isLogin">
       <button  [routerLink]="['/Register']"type="button" data-toggle="modal" data-target="#modalRegisterForm" class="btn  btn-rounded icon-Header-li">
-        Register
+        Sign in 
       </button>
     </div>
+  <!-- End Registrer -->
+
   <!-- login -->
- <div class="text-center">
+ <div class="text-center"*ngIf="!isLogin">
         <button  [routerLink]="['/Login']" type="button" data-toggle="modal" data-target="#modalLoginForm" class="btn btn-rounded icon-Header-li">
-          Login
+          LogIn
         </button>
-      </div>
+    </div>
   <!-- End login  -->
+  <!-- Exit -->
+  <div class="text-center" *ngIf="isLogin">
+      <button  type="button"class="btn btn-rounded icon-Header-li"(click)= "onclickLogout()">
+       LogOut
+      </button>
+  </div>
+<!-- End Exit  -->
+
 
   <!-- Shopping Cart -->
   <li class="nav-item  icon-Header-li ml-5">

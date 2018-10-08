@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 export class AuthService {
   
   constructor(
-    public afAuth: AngularFireAuth
+    public afAuth: AngularFireAuth,
   ) { }
 
   // Register
@@ -34,7 +34,7 @@ getAuth(){
   return this.afAuth.authState.map( auth => auth);
 }
 
-  logout(){
+logout(){
     return this.afAuth.auth.signOut();
   }
 }

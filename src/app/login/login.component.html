@@ -9,22 +9,23 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body mx-3">
+          <form class="modal-body mx-3" (submit)="onSubmitLogin()">
             <div class="md-form mb-5">
               <i class="fa fa-envelope prefix grey-text"></i>
-              <input type="email" id="defaultForm-email" class="form-control validate" name="Email">
+              <input type="email" id="defaultForm-email" class="form-control validate" name="Email"[(ngModel)] ="email" >
               <label data-error="Invalid email!" data-success="right" for="defaultForm-email">Your email</label>
             </div>
             <div class="md-form mb-4">
               <i class="fa fa-lock prefix grey-text"></i>
-              <input type="password" id="defaultForm-pass" class="form-control validate" name="Password">
+              <input type="password" id="defaultForm-pass" class="form-control validate" [(ngModel)] ="password"  name="Password">
               <label data-error="wrong" data-success="right">Your
                 password</label>
             </div>
-          </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn btn-deep-orange">Log In </button>
-          </div>
+            <div class="modal-footer d-flex justify-content-center">
+              <button class="btn btn-deep-orange">Log In </button>
+            </div>
+          </form>
+
   <!-- Social Media -->
   <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:</p>
           <div class="row my-3 d-flex justify-content-center">

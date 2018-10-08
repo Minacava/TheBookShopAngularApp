@@ -36,7 +36,6 @@ export class RegisterComponent implements OnInit {
       console.log(res)
       console.log(this.nombre);
 
-    // document.getElementById('modalRegisterForm').classList.remove("modal-open");
       this.hideModal();
       this.router.navigate(['/Home', this.nombre])
      

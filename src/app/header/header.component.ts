@@ -1,34 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import { ToBuyComponent} from "../to-buy/to-buy.component"
+import { AuthService } from '../services/auth.service';
+import { auth } from 'firebase';
 
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [
-    ToBuyComponent
-
-  ]
+ 
 })
-export class HeaderComponent implements OnInit {
-  public login: boolean;
-  
-  constructor(
-    private _router:Router) { 
-      this.login = false;
-    }
+export class HeaderComponent implements OnInit{
+  public isLogin: boolean;
+  public userName : string;
+  public userEmail: string;
 
-  ngOnInit() {
-  }
- redirect(){
-  this._router.navigate(['ToBuy']);
+ constructor(
+  public authService:AuthService,
+ ){
+
  }
- setLogin(){
-   this.login = true;
+ ngOnInit(){
+   this.authService.getAuth().subscribe ( auth => {
+     if ( auth ){
+       this.isLogin = true;
+       this.userName = auth.displayName;
+       this.userEmail = auth.email;
+     }else{
+      this.isLogin = false;
+     }
+
+
+   })
+
  }
- unsetLogin(){
-  this.login = false;
+ onclickLogout(){
+   this.authService.logout();
+   console.log("LOGOUT")
  }
+
 }
