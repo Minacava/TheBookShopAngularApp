@@ -51,6 +51,7 @@ import{ AuthService } from './services/auth.service'
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+ 
   ],
   providers: [
     appRoutingProviders,

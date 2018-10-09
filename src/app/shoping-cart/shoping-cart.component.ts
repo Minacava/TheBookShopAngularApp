@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shoping-cart.component.css']
 })
 export class ShopingCartComponent implements OnInit {
+  public shoppingCart:[];
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'))
+    console.log('myShoppingCart', this.shoppingCart)
   }
 
 }

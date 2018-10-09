@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+
 declare var $: any;
 
 @Component({
@@ -11,11 +12,13 @@ declare var $: any;
 export class RegisterComponent implements OnInit {
   public email:string;
   public password:string;
-  public nombre:string
+  public nombre:string;
+  public UserName:string;
 
   constructor(
     public authService:AuthService,
-    public router:Router
+    public router:Router,
+   
   ) { }
   
   public hideModal()
@@ -27,6 +30,9 @@ export class RegisterComponent implements OnInit {
   }
   onKey() {
     console.log(this.nombre);
+    this.UserName = 'UserName';
+    localStorage.setItem(this.UserName, this.nombre);
+    console.log(localStorage);
   }
 
 
@@ -38,6 +44,7 @@ export class RegisterComponent implements OnInit {
 
       this.hideModal();
       this.router.navigate(['/Home', this.nombre])
+      console.log(localStorage);
      
     }).catch((err)=>{
       console.log(err);

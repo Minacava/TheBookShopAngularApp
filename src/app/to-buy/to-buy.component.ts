@@ -21,12 +21,14 @@ export class ToBuyComponent implements OnInit {
   public BookPicture: Array<BookPictures>;
   public DisplayBooks: boolean;
   public matches = [];
-  public modalDis = []
+  public modalDis = [];
+  public sellBook = [];
   public inputResult: string = "";
   public values = '';
-  public bookID:any;;
+  public bookID:any;
   public clickedID: any;
- 
+  public key:string;
+  public myItem:any;
  
 
 
@@ -109,6 +111,17 @@ export class ToBuyComponent implements OnInit {
   onSubmit() {
     console.log("Form Submitted!");
   }
+  // take the selected book 
+  getTheBook(bookID) {
+    console.log(bookID);
+    this.sellBook.push(bookID)
+    console.log(this.sellBook);
+    this.key = 'shoppingCart';
+    localStorage.setItem(this.key,  JSON.stringify(this.sellBook));
+    console.log(localStorage);
+ 
+  }
+ 
 
 }
 

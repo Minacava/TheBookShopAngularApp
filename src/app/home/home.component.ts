@@ -23,16 +23,16 @@ export class HomeComponent implements OnInit{
         new BestSell ('Rich People Problems', 25, '../assets/img/3book.jpg'),
 
     ];
-    this._route.params.subscribe((params:Params) =>{
-     this.nombre = params.nombre;
-     console.log(params);
-
-
-  })
+    //this._route.params.subscribe((params:Params) =>{
+    //this.nombre = params.nombre; 
+    // console.log(params);
+    //})
+    this.nombre = localStorage.getItem('UserName')
  }
 
  ngOnInit(){
      console.log(this.bestSellers);
+   
 
  }
 
