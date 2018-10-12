@@ -1,19 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { PetitionsService } from '../services/petitions.service';
 import { BookPictures } from '../models/BookPictures';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
+declare var  $: any;
 
-
-
-declare var  $:any;
 @Component({
   selector: 'app-to-buy',
   templateUrl: './to-buy.component.html',
   styleUrls: ['./to-buy.component.css'],
   providers: [
     PetitionsService,
-    
-
   ]
 })
 export class ToBuyComponent implements OnInit {
@@ -23,14 +19,12 @@ export class ToBuyComponent implements OnInit {
   public matches = [];
   public modalDis = [];
   public sellBook = [];
-  public inputResult: string = "";
+  public inputResult = '';
   public values = '';
-  public bookID:any;
+  public bookID: any;
   public clickedID: any;
-  public key:string;
-  public myItem:any;
- 
-
+  public key: string;
+  public myItem: any;
 
   constructor(
     private _petitionsService: PetitionsService,
@@ -47,9 +41,9 @@ export class ToBuyComponent implements OnInit {
   onKey(value: string) {
     console.log(value);
   }
-  // Show not found option 
+  // Show not found option
   demoDisplay() {
-    document.getElementById("GetAlert").style.display = "block";
+    document.getElementById('GetAlert').style.display = 'block';
   }
 
 // Calling data
@@ -65,26 +59,23 @@ export class ToBuyComponent implements OnInit {
     );
   }
 
-  
 // SHowing data to the view
   ngOnInit() {
     this.getBooksfr();
-  
   }
 
   // Search Result
   onClickMe(inputResult) {
     for (let i = 0; i < this.book.length; i++) {
-      if (inputResult == this.book[i].title) {
+      if (inputResult === this.book[i].title) {
         this.matches = [];
-        this.matches.push(this.book[i])
+        this.matches.push(this.book[i]);
         console.log(this.matches);
-      } else if (inputResult != this.book[i].title) {
+      } else if (inputResult !== this.book[i].title) {
         this.DisplayBooks = false;
         this.demoDisplay();
-      }
-      else {
-        console.log("Fatal error")
+      } else {
+        console.log('Fatal error');
       }
     }
   }
@@ -93,14 +84,14 @@ export class ToBuyComponent implements OnInit {
 
 // Show book Modal
   DisplayInModal(bookID) {
-    console.log("modal Works");
+    console.log('modal Works');
     for (let i = 0; i < this.book.length; i++) {
-      if (this.book[i].id == bookID) {
+      if (this.book[i].id === bookID) {
         this.modalDis = [];
-        this.modalDis.push(this.book[i])
+        this.modalDis.push(this.book[i]);
         console.log(this.modalDis);
       } else {
-        console.log("Fatal error")
+        console.log('Fatal error');
         console.log(this.modalDis);
       }
     }
@@ -109,20 +100,16 @@ export class ToBuyComponent implements OnInit {
 
 // Testing form submit
   onSubmit() {
-    console.log("Form Submitted!");
+    console.log('Form Submitted!');
   }
-  // take the selected book 
+  // take the selected book
   getTheBook(bookID) {
     console.log(bookID);
-    this.sellBook.push(bookID)
-    console.log(this.sellBook);
+    this.sellBook.push(bookID);
     this.key = 'shoppingCart';
     localStorage.setItem(this.key,  JSON.stringify(this.sellBook));
     console.log(localStorage);
- 
   }
- 
-
 }
 
 

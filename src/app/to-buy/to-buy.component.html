@@ -104,7 +104,7 @@
                 <p id="custom-size">{{match.description}}</p>
               </div>
               <p class="custom-price mt-5">${{match.price}}</p>
-              <button type="button" class="btn btn-books btn-sm btn-outline-dark waves-effect flex text-center px-3"><i
+              <button type="button" (click)="QToFBooks()"class="btn btn-books btn-sm btn-outline-dark waves-effect flex text-center px-3"><i
                   class="fas fa-shopping-cart" aria-hidden="true"></i></button>
                           <!-- Button trigger modal -->
             <button (click)="DisplayInModal(match.id)" type="button" class="btn btn-books-info btn-outline-dark flex"

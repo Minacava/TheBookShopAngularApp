@@ -1,23 +1,29 @@
 <body [style.backgroundSize]="'cover'">
 
-  <div class="container">
+  <div class="container" >
     <h1> Shopping Cart</h1>
     <table class="table table-xs">
       <tr>
         <th></th>
         <th>Description</th>
-        <th class="text-right">Amount</th>
         <th class="text-right">Price</th>
         <th class="text-right">Total</th>
       </tr>
-      <tr class="item-row">
-        <td> <img src=""/></td>
+   
+      <tr class="item-row" *ngFor="let shoppingCarts of shoppingCart">
+          <div >
+                <a (click)="remove(shoppingCarts)" type="button" class=" product-removal text-black btn-floating " ><i class="fa fa-remove" aria-hidden="true"></i></a>
+            </div>
+        <td> <img src="{{shoppingCarts.image}}"/></td>
         <td>
-          <p> <strong></strong></p>
+          <p> <strong>{{shoppingCarts.title}} <br>
+          </strong>
+          {{shoppingCarts.description}}</p>
           <p></p>
         </td>
         <td class="text-right" title="Amount"></td>
-        <td class="text-right" title="Price"></td>
+        <td class="text-right" title="Price">${{shoppingCarts.price}}</td>
+      
         <td class="text-right" title="Total"></td>
       </tr>
       <tr class="total-row info">

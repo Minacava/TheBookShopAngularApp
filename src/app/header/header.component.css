@@ -139,7 +139,18 @@ a:hover {
       -webkit-transform: rotate(90deg); transform: rotate(90deg);
   }
 /* Shoping Cart */
-
+.badge{
+    background-color: #6394F8;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
 /* searchFrom */
 .navbar.navbar-light form .md-form input {
     border-bottom: 1px solid #f5f2f2;

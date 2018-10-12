@@ -23,7 +23,9 @@ import { environment } from '../environments/environment';
 // Pipe
 import { FilterPipe } from './pipes/filter.pipe';
 // Service
-import{ AuthService } from './services/auth.service'
+import { AuthService } from './services/auth.service';
+import { AddCartService } from './services/add-cart.service';
+
 
 
 
@@ -42,7 +44,6 @@ import{ AuthService } from './services/auth.service'
     LoginComponent,
     RegisterComponent,
     PrivatePageComponent
- 
   ],
   imports: [
     BrowserModule,
@@ -51,11 +52,11 @@ import{ AuthService } from './services/auth.service'
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
- 
   ],
   providers: [
     appRoutingProviders,
-    AuthService
+    AuthService,
+    AddCartService
   ],
   bootstrap: [AppComponent]
 })
