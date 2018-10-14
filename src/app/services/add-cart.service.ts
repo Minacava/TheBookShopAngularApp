@@ -1,21 +1,20 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AddCartService {
-  public shoppingCart = [];
+  public shoppingCartLe: string;
+  public shoppingCartlength;
+
   constructor() { }
 
 
+  udpateSBooks() {
+    this.shoppingCartLe = JSON.parse(localStorage.getItem('shoppingCart'));
+    return this.shoppingCartlength = this.shoppingCartLe.length;
 
-   remove(shoppingCart) {
-  for (let i = 0; i < this.shoppingCart.length; i++) {
-
-     if (this.shoppingCart[i] === this.shoppingCart) {
-       this.shoppingCart.splice(this.shoppingCart[i]);
-        console.log(this.shoppingCart[i].id);
-     }
   }
- }
 }

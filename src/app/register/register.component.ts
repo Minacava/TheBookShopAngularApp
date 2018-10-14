@@ -10,19 +10,16 @@ declare var $: any;
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  public email:string;
-  public password:string;
-  public nombre:string;
-  public UserName:string;
+  public email: string;
+  public password: string;
+  public nombre: string;
+  public UserName: string;
 
   constructor(
-    public authService:AuthService,
-    public router:Router,
-   
+    public authService: AuthService,
+    public router: Router,
   ) { }
-  
-  public hideModal()
-  {
+  public hideModal() {
     $('#modalRegisterForm').modal('hide');
  }
 
@@ -36,23 +33,19 @@ export class RegisterComponent implements OnInit {
   }
 
 
-  onSubmitAddUser(){
-    this.authService.registerUser(this.email, this.password).then( (res) =>{
-      console.log('Works!!!!!!!')
-      console.log(res)
+  onSubmitAddUser() {
+    this.authService.registerUser(this.email, this.password).then( (res) => {
+      console.log('Works!!!!!!!');
+      console.log(res);
       console.log(this.nombre);
 
       this.hideModal();
-      this.router.navigate(['/Home', this.nombre])
+      this.router.navigate(['/Home', this.nombre]);
       console.log(localStorage);
-     
-    }).catch((err)=>{
+    }).catch((err) => {
       console.log(err);
-    })
-
-  
+    });
   }
-  
 }
 
 

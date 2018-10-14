@@ -12,34 +12,30 @@ declare var $: any;
 })
 export class LoginComponent implements OnInit {
   public login: boolean;
-  public email:string;
-  public password:string;
-  public nombre:string
+  public email: string;
+  public password: string;
+  public nombre: string;
 
   constructor(
-    public authService:AuthService,
-    public router:Router,
-   
+    public authService: AuthService,
+    public router: Router,
   ) {  }
 
 
-public hideModal()
-  {
+public hideModal() {
     $('#modalLoginForm').modal('hide');
   }
 
   ngOnInit() {
   }
- 
-  onSubmitLogin(){
-    this.authService.loginEmail(this.email, this.password).then( (res) =>{
+  onSubmitLogin() {
+    this.authService.loginEmail(this.email, this.password).then( (res) => {
       this.hideModal();
-      this.router.navigate(['/Home'])
- 
-    }).catch((err)=>{
+      this.router.navigate(['/Home']);
+    }).catch((err) => {
       console.log(err);
-      this.router.navigate(['/Login'])
-    })
+      this.router.navigate(['/Login']);
+    });
 
   }
 

@@ -6,7 +6,11 @@ img{
   width: 50%;
 }
 .product-removal {
-  background-color: transparent;
+  background-color: #6394F8;
+  border-radius: 10px;
+  color: white!important;
+  padding: 3px 7px;
+ 
 }
 @media (max-width: 414px) {
   .table-xs tr,
