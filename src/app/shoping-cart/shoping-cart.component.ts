@@ -22,7 +22,6 @@ export class ShopingCartComponent implements OnInit {
 
 ngOnInit() {
     this.shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-    localStorage.clear();
 
 }
 
