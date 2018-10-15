@@ -227,11 +227,12 @@ input[type="text"]{
     }
    
  }
+
  @media(max-width:515px){
     .product-rating-details{
         padding-left:0;
       }
-  
-  }input[type="text"]{
-    font-size: 0.5em;
+      input[type="text"]{
+        font-size: 0.5em;
+    }
 }

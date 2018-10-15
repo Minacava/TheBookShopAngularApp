@@ -33,7 +33,7 @@ ngOnInit() {
       this.shoppingCart.splice(this.removeBooks, 1);
       console.log('adios' + this.addCartService.udpateSBooks());
      } else {
-      console.log('Fatal error');
+      console.log('adios' + this.addCartService.udpateSBooks());
     }
   }
  }
