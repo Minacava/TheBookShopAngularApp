@@ -22,20 +22,19 @@ export class ShopingCartComponent implements OnInit {
 
 ngOnInit() {
     this.shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-    console.log('hola' + this.addCartService.udpateSBooks());
+    localStorage.clear();
+
 }
 
 // Remove books from shopping cart list
  remove(removeBook) {
   for (let i = 0; i < this.shoppingCart.length; i++) {
-    console.log('adios' + this.addCartService.udpateSBooks());
      if (removeBook === this.shoppingCart[i]) {
       this.removeBooks  = this.shoppingCart.indexOf(removeBook);
       this.shoppingCart.splice(this.removeBooks, 1);
-      console.log('hola' + this.addCartService.udpateSBooks());
+      console.log('adios' + this.addCartService.udpateSBooks());
      } else {
       console.log('Fatal error');
-      this.addCartService.udpateSBooks();
     }
   }
  }

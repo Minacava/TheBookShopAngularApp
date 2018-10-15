@@ -16,7 +16,8 @@ export class HeaderComponent implements OnInit {
   public isLogin: boolean;
   public userName: string;
   public userEmail: string;
-  public shoppingCartLe: number;
+  public shoppingCartLe: string;
+  public shoppingCartlength;
 
  constructor(
   public authService: AuthService,
@@ -35,7 +36,13 @@ export class HeaderComponent implements OnInit {
       this.isLogin = false;
      }
    });
-   this.shoppingCartLe = this.addCartService.udpateSBooks();
+ }
+
+ getQ() {
+  this.shoppingCartLe = JSON.parse(localStorage.getItem('shoppingCart'));
+  this.shoppingCartlength = this.shoppingCartLe.length;
+  return this.shoppingCartlength;
+
  }
 
 

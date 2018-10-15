@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -14,7 +14,7 @@ export class AddCartService {
 
   udpateSBooks() {
     this.shoppingCartLe = JSON.parse(localStorage.getItem('shoppingCart'));
-    return this.shoppingCartlength = this.shoppingCartLe.length;
-
+    this.shoppingCartlength = this.shoppingCartLe.length;
+    return this.shoppingCartlength;
   }
 }
