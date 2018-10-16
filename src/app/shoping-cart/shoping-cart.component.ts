@@ -13,7 +13,9 @@ export class ShopingCartComponent implements OnInit {
   public removeBooks: any;
   public total;
   public product: any;
-
+  public shoppingCartLe: string;
+  public shoppingCartlength;
+  public key: string;
 
   constructor(
     public addCartService: AddCartService,
@@ -22,22 +24,18 @@ export class ShopingCartComponent implements OnInit {
 
 ngOnInit() {
     this.shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-
 }
 
-// Remove books from shopping cart list
  remove(removeBook) {
   for (let i = 0; i < this.shoppingCart.length; i++) {
      if (removeBook === this.shoppingCart[i]) {
       this.removeBooks  = this.shoppingCart.indexOf(removeBook);
       this.shoppingCart.splice(this.removeBooks, 1);
-      console.log('adios' + this.addCartService.udpateSBooks());
-     } else {
-      console.log('adios' + this.addCartService.udpateSBooks());
-    }
+      this.key = 'shoppingCart';
+      localStorage.setItem(this.key, JSON.stringify(this.shoppingCart));
+     }
   }
  }
-
 
  getTotal() {
  this.total = 0;

@@ -42,7 +42,6 @@ export class HeaderComponent implements OnInit {
   this.shoppingCartLe = JSON.parse(localStorage.getItem('shoppingCart'));
   this.shoppingCartlength = this.shoppingCartLe.length;
   return this.shoppingCartlength;
-
  }
 
 

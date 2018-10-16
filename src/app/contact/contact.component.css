@@ -21,7 +21,7 @@ body{
   form {
     font-family: 'roboto', sans-serif;
     width: 460px;
-    margin: 40px auto;
+    margin: 60px auto;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     padding: 0 0 40px;
     border-radius: 3px;
@@ -119,6 +119,12 @@ button {
     color: #0f0404;
     margin: 30px 0 0 25px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.position{
+  margin-top: 200px !important;
+  color: white;
+  font-weight: bold;
 }
   button:hover {
     -webkit-transform: translateY(-2px);

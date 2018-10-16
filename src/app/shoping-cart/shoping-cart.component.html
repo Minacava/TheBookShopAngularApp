@@ -5,12 +5,14 @@
     <table class="table table-xs">
       <tr>
         <th></th>
-        <th class="text-right ">Description</th>
+        <th class="text-left ">Book</th>
+        <th class="text-left">Description</th>
+        <th class="text-left "></th>
         <th class="text-right ">Price</th>
       </tr>
    
       <tr class="item-row" *ngFor="let shoppingCarts of shoppingCart">
-          <div >
+            <div >
                 <a (click)="remove(shoppingCarts)" type="button" class=" product-removal text-black btn-floating " ><i class="fa fa-remove" aria-hidden="true"></i></a>
             </div>
         <td> <img src="{{shoppingCarts.image}}"/></td>

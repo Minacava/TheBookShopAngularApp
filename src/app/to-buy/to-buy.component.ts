@@ -108,7 +108,6 @@ export class ToBuyComponent implements OnInit {
     this.sellBook.push(bookID);
     this.key = 'shoppingCart';
     localStorage.setItem(this.key,  JSON.stringify(this.sellBook));
-    console.log(localStorage);
   }
 }
 
