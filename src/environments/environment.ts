@@ -3,14 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  firebaseConfig:{
-    apiKey: "AIzaSyAEnrec_2PTjufJIrorQHgi9Di8fdDo-xA",
-    authDomain: "loginapp-3753e.firebaseapp.com",
-    databaseURL: "https://loginapp-3753e.firebaseio.com",
-    projectId: "loginapp-3753e",
-    storageBucket: "loginapp-3753e.appspot.com",
-    messagingSenderId: "215668300033"
+  production: true,
+  firebaseConfig: {
+    apiKey: 'AIzaSyAEnrec_2PTjufJIrorQHgi9Di8fdDo-xA',
+    authDomain: 'loginapp-3753e.firebaseapp.com',
+    databaseURL: 'https://loginapp-3753e.firebaseio.com',
+    projectId: 'loginapp-3753e',
+    storageBucket: 'loginapp-3753e.appspot.com',
+    messagingSenderId: '215668300033'
   }
 };
 
@@ -20,4 +20,4 @@ export const environment = {
  * import the following file, but please comment it out in production mode
  * because it will have performance impact when throw error
  */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI
