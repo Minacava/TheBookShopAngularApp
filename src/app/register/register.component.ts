@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
-  onKey() {
+  onKey(value) {
     console.log(this.nombre);
     this.UserName = 'UserName';
     localStorage.setItem(this.UserName, this.nombre);
