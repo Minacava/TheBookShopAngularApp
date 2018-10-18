@@ -13,7 +13,7 @@
             <input placeholder="Location" type="text" #location= "ngModel"[(ngModel)]= "contactUser.location" name ="third"required/>
             <span class= "validated" *ngIf ="location.touched && !location.valid">Please, enter a valid name.</span>
             <div class="flex">
-              <textarea #messege= "ngModel"[(ngModel)]= "contactUser.messege" name ="four" placeholder="Message" rows="1" required></textarea>
+              <textarea name ="four" placeholder="Message" rows="1" required></textarea>
               <span class= "validated" *ngIf ="message.touched && !message.valid">Please, enter a valid name.</span>
             </div>
           <button>Send</button>

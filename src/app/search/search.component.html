@@ -3,7 +3,6 @@
     <input #box (keyup)="onKey(box.value)"[(ngModel)]="inputResult"
     name= "inputResult"
     class="form-control" 
-    (keyup.tarjet)= "GetSearchData()"
     type="text" placeholder="Search"> 
   </div>
   <button [routerLink]="['/Search']" [routerLinkActive]="['active']" (click)="onClickMe(inputResult)" type="button" class="btn btn-sm btn-outline-warning waves-effect px-3 mb-4"><i class="fa fa-search" aria-hidden="true"></i></button>

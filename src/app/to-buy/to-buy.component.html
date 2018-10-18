@@ -9,7 +9,7 @@
           <form class="form-inline waves-light" (ngSubmit)="onSubmit()" mdbWavesEffect>
             <div class="md-form mt-0">
               <input #box (keyup)="onKey(box.value)" [(ngModel)]="inputResult" name="inputResult" class="form-control"
-                (keyup.tarjet)="GetSearchData()" type="text" placeholder="TITLE">
+               type="text" placeholder="TITLE">
             </div>
             <button (click)="onClickMe(inputResult)" type="submit" class="btn btn-sm btn-outline-warning waves-effect px-3 mb-4"><i
                 class="fa fa-search" aria-hidden="true"></i></button>
