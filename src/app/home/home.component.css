@@ -45,7 +45,7 @@ h4{
 /* Animation */
 
   
-  [class*="el"] {
+  /* [class*="el"] {
     -webkit-animation: bouncing 2s  ease;
             animation: bouncing 2s  ease;
   }
@@ -55,10 +55,7 @@ h4{
       -webkit-transform: scale3d(1, 1, 1);
               transform: scale3d(1, 1, 1);
     }
-    50% {
-      -webkit-transform: scale3d(0, 0, 1);
-              transform: scale3d(0, 0, 1);
-    }
+ 
   }
   
   @keyframes bouncing {
@@ -66,11 +63,8 @@ h4{
       -webkit-transform: scale3d(1, 1, 1);
               transform: scale3d(1, 1, 1);
     }
-    50% {
-      -webkit-transform: scale3d(0, 0, 1);
-              transform: scale3d(0, 0, 1);
-    }
-  }
+ 
+  } */
 /* End Animation */
 
 /* About Us Box */
