@@ -42,30 +42,7 @@ h4{
  font-size: 3em;
  margin-top: 20%;
 }
-/* Animation */
 
-  
-  /* [class*="el"] {
-    -webkit-animation: bouncing 2s  ease;
-            animation: bouncing 2s  ease;
-  }
-  
-  @-webkit-keyframes bouncing {
-    0%, 100% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
- 
-  }
-  
-  @keyframes bouncing {
-    0%, 100% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
- 
-  } */
-/* End Animation */
 
 /* About Us Box */
 

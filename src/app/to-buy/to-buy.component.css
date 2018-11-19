@@ -192,27 +192,6 @@ input[type="text"]{
     margin-top: 3px 0 !important;
   }
   
-  
-  /* .el1 {
-    -webkit-animation: bouncing 2s  ease;
-            animation: bouncing 2s  ease;
-  } */
-  
-  @-webkit-keyframes bouncing {
-    0%, 50% {
-      -webkit-transform: scale3d(0, 0, 1);
-              transform: scale3d(0, 0, 1);
-    }
- 
-  }
-  
-  @keyframes bouncing {
-    0%, 50% {
-      -webkit-transform: scale3d(1, 1, 1);
-              transform: scale3d(1, 1, 1);
-    }
-
-  }
 /* End Animations */
 @media (max-width: 767.98px) { 
     .Serch-Title{
