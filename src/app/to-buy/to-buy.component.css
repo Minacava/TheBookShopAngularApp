@@ -31,7 +31,7 @@ a:hover {
 .card{
     padding-bottom: 30px;
     margin: 2% !important;
-    margin-top:10%!important;
+    margin-top:5%!important;
     box-shadow: none;
     font-weight: 300;
 }
@@ -180,19 +180,7 @@ input[type="text"]{
     margin: auto;
     padding: 0!important;
 }
-/* Animations */
- .start-screen {
-    justify-content: center;
-    flex-flow: nowrap column;
-    min-height: 100vh;
-    margin: 0 auto;
-  }
-  .loading {
-    display: flex;
-    margin-top: 3px 0 !important;
-  }
-  
-/* End Animations */
+
 @media (max-width: 767.98px) { 
     .Serch-Title{
         font-size: 1em;
