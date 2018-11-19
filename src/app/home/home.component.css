@@ -146,7 +146,11 @@ strong{
        display: none;
     }
   
-   
+    .Title-Container{
+        margin: 30px auto;
+        max-width: 100%;
+     
+    }
 }
 @media (max-width: 426px){
     .aboutUs-box{
@@ -155,8 +159,8 @@ strong{
         margin-right: 2%;
     }
     .Title-Container{
-        margin: 10px auto;
-        max-width: 90%;
+        margin: 30px auto;
+        max-width: 100%;
      
     }
 }

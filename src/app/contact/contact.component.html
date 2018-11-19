@@ -2,7 +2,7 @@
 <!-- <section class="my-5"> -->
    <!-- Section heading -->
    <h2 class="h1-responsive font-weight-bold text-center my-5">Contact us</h2>
-    <div class="row">
+    <div class="row  badge-primary">
       <div class="col-lg-5 mb-lg-0 mb-4">
         <!-- Form -->
         <form (ngSubmit)="onSubmit(ContactoForm)" #ContactoForm="ngForm">
@@ -14,24 +14,24 @@
             <span class= "validated" *ngIf ="location.touched && !location.valid">Please, enter a valid name.</span>
             <div class="flex">
               <textarea name ="four" placeholder="Message" rows="1" required></textarea>
-              <span class= "validated">Please, enter a valid name.</span>
+              <span class= "validated"></span>
             </div>
           <button>Send</button>
           </form>
         <!-- Formr -->
       </div>
       <!-- Grid column -->
-      <div class="col-lg-7">
+      <div class="col-lg-7 mb-5">
         <!-- Buttons-->
         <div class="row text-center">
-          <div class="col-md-4 position">
+          <div class="col-md-4 col-sm-6 position">
             <a class="btn-floating blue accent-1">
               <i class="fa fa-map-marker"></i>
             </a>
             <p>New York, 94126</p>
             <p class="mb-md-0">United States</p>
           </div>
-          <div class="col-md-4 position ">
+          <div class="col-md-4  col-sm-6 position ">
             <a class="btn-floating blue accent-1">
               <i class="fa fa-phone"></i>
             </a>

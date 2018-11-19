@@ -21,7 +21,7 @@ body{
   form {
     font-family: 'roboto', sans-serif;
     width: 460px;
-    margin: 60px auto;
+    margin: 0 auto;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     padding: 0 0 40px;
     border-radius: 3px;
@@ -111,7 +111,6 @@ button {
     transition: transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), box-shadow 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
     transition: transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), box-shadow 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
     border: none;
-
     cursor: pointer;
     border-radius: 3px;
     padding: 6px;
@@ -122,7 +121,6 @@ button {
 }
 
 .position{
-  margin-top: 200px !important;
   color: white;
   font-weight: bold;
 }
