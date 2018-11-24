@@ -6,8 +6,6 @@
     margin-bottom: .25rem !important;
     padding: 0!important;
     box-shadow: none;
- 
-
 }
 a:hover {
     -webkit-transition: all .2s ease-in-out;
@@ -118,7 +116,9 @@ a:hover {
 .navbar-light .navbar-nav .nav-link {
     font-size: 0.6em;
     text-transform: uppercase;
-    color: #757575!important;
+    color: #cc3a3a!important;
+    border-bottom: solid 0.5px #fbfaf7;
+    background: transparent;
 }
 .navbar-light .navbar-nav .nav-link:hover {
     background-color: #e25714;
@@ -130,14 +130,7 @@ a:hover {
     font-family: 'Gloria Hallelujah', cursive;
     display: inline;
 }
- /* Btn-toggle */
-.animatedBtn {
-    -webkit-transform: rotate(0deg); transform: rotate(0deg);
-      -webkit-transition: 0.2s ease; transition: 0.2s ease;
-  }
-.animatedBtn:hover {
-      -webkit-transform: rotate(90deg); transform: rotate(90deg);
-  }
+
 /* Shoping Cart */
 .badge{
     background-color: #6394F8;

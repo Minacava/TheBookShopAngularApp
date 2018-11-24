@@ -29,6 +29,7 @@ h4{
 .Title-Container{
     padding: 5% 10%;
     max-width: 40%;
+    height: 50em;
     float: left;
     font-family: 'M PLUS Rounded 1c', sans-serif;  
     background-color: #FBD160;
@@ -43,11 +44,10 @@ h4{
  margin-top: 20%;
 }
 
-
 /* About Us Box */
 
 .aboutUs-box{
-    width: 40%;
+    width: 45%;
     height: auto;
     color:#757575;
     margin-top:4%;
@@ -60,7 +60,22 @@ h4{
     letter-spacing: 0.2em;
 
 }
-
+.box-policies {
+    width: 30%;
+    background-color: #4285F4;
+    justify-content: center;
+    height: 4em;
+    margin-top:4%;
+    padding-top: 2%;    
+    color: white!important;
+    margin-right:1px;
+    font-size: 0.8em;
+}
+.box-policies a {
+    color: white!important;
+    margin-left:4%;
+    font-weight: bold;
+}
 /* BestSell Section */
 .flex { 
     display: flex;
@@ -71,29 +86,30 @@ h4{
 .best-Sell{
     width: 40%;
     height: auto;
-    margin-top: 10%;
+    margin-top: 5%;
+    padding-top: 5%;
     margin-right:20px;
     justify-content: center;
     position: relative;
     z-index: -1;
     bottom: 0;
     font-family: 'M PLUS Rounded 1c', sans-serif; 
-    font-size:0.7em;
+    font-size:0.9em;
+    font-weight: regular;
 
 }
 .salesFont{
     font-family: 'Gloria Hallelujah', cursive;
     margin-top:0;
-    font-size:1em;
+    font-size:2em;
 }
 .card-image-best-Sell {
-    width:110px;
+    width:120px;
     height: 150px!important;
     margin: 1%;
 }
 strong{  
     font-size:1em; 
-
 }
 .md-form {
     bottom: 1px!important;
@@ -129,7 +145,8 @@ strong{
      
     }
 }
-@media (max-width: 426px){
+
+@media (max-width: 575.98px) {
     .aboutUs-box{
         width: 70%;
         margin-top:2%;
@@ -137,7 +154,13 @@ strong{
     }
     .Title-Container{
         margin: 30px auto;
+        padding-top:70px;
+        margin-top:-55px;
         max-width: 100%;
-     
+        height: 43em;
+        font-weight: bold;
+    }
+    .box-policies {
+        width: 100%;
     }
 }
